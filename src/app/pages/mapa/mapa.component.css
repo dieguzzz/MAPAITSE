@@ -1,0 +1,184 @@
+.content {
+  position: relative;
+  width: 100%;
+  height: 87vh;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hover-label {
+  position: absolute;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.hover-label:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.green {
+  background-color: rgba(0, 128, 0, 0.7);
+  top: 45%;
+  left: 75%;
+}
+.green:hover {
+  background-color: rgba(0, 128, 0, 0.9);
+}
+
+.yellow {
+  background-color: rgba(255, 200, 0, 0.7);
+  color: #333;
+  top: 18%;
+  left: 39%;
+}
+.yellow:hover {
+  background-color: rgba(255, 200, 0, 0.9);
+}
+
+.red {
+  background-color: rgba(220, 53, 69, 0.7);
+  top: 60%;
+  left: 26%;
+}
+.red:hover {
+  background-color: rgba(220, 53, 69, 0.9);
+}
+
+.blue {
+  background-color: rgba(0, 123, 255, 0.7);
+  top: 9%;
+  left: 70%;
+}
+.blue:hover {
+  background-color: rgba(0, 123, 255, 0.9);
+}
+
+/* Estilos para paneles de información */
+.info-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+.info-header {
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.green-panel .info-header {
+  background-color: rgba(0, 128, 0, 0.9);
+}
+
+.yellow-panel .info-header {
+  background-color: rgba(255, 200, 0, 0.9);
+  color: #333;
+}
+
+.red-panel .info-header {
+  background-color: rgba(220, 53, 69, 0.9);
+}
+
+.blue-panel .info-header {
+  background-color: rgba(0, 123, 255, 0.9);
+}
+
+.info-content {
+  padding: 15px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.info-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #18446C;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.info-link:hover {
+  background-color: #0f2c4a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Para mejorar la accesibilidad y UX */
+.hover-label {
+  cursor: pointer;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: #18446C;
+  display: inline-block;
+}
+
+a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 3px;
+  background-color: #18446C;
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 3px;
+  background-color: #18446C;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}

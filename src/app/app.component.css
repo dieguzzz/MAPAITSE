@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HELVETICA';
+  src: url('/assets/fonts/HelveticaRoman.ttf');
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  margin:0;
+  padding: 0;
+}
